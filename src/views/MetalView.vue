@@ -3,6 +3,7 @@
 <template>
     <div>
         <h1>{{ genre }}</h1>
+        <h2>{{ totalMetal }} Albums</h2>
         <Albums :albums="metal" />
         <BackButton/>
     </div>
@@ -12,7 +13,7 @@
 import Albums from '@/components/Albums.vue';
 import BackButton from '@/components/BackButton.vue';
 
-import { mapState } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 
 export default {
     name: 'metal-view',
@@ -25,7 +26,8 @@ export default {
         }
     },
     computed: {
-        ...mapState(['metal'])
+        ...mapState(['metal']),
+        ...mapGetters(['totalMetal'])
     },
     // methods: {}
     // watch: {},

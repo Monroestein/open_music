@@ -2,27 +2,24 @@
 
 <template>
     <div class="container"> 
-            <h2>{{ music }} Albums registered so far.</h2>
+
+            <h2>{{ totalAlbums }} Albums registered so far.</h2>
+
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
     name: 'quantity-comp',
-    props: {
-        music:{
-            funk: {
-                id: {
-                    type: Number,
-                    required: true
-                }
-            }
-        }
-    },
+    // props: {},
     data: function(){
         return {}
     },
-    // computed: {},
+    computed: {
+        ...mapGetters(['totalAlbums'])
+    },
     // methods: {}
     // watch: {},
     // components: {},
@@ -34,5 +31,7 @@ export default {
 </script>
 
 <style scoped>
-    
+.container{
+    margin: 2rem auto
+}
 </style>

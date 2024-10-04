@@ -2,7 +2,8 @@
   <div class="home">
     <Header/>
     <Categories/>
-    <Quantity :music="state"/>
+    <Quantity/>
+    <NewAlbum/>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import Header from '@/components/Header.vue';
 import Categories from '@/components/Categories.vue';
 import Quantity from '@/components/Quantity.vue';
+import NewAlbum from '@/components/NewAlbum.vue';
 
 import { mapState } from 'vuex';
 
@@ -22,7 +24,8 @@ export default {
   components: {
     Header,
     Categories,
-    Quantity
+    Quantity,
+    NewAlbum
   }
 }
 </script>

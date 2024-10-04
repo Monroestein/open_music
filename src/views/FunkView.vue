@@ -3,6 +3,7 @@
 <template>
     <div>
         <h1>{{ genre }}</h1>
+        <h2>{{ totalFunk }} Albums</h2>
         <Albums :albums="funk" />
         <BackButton/>
     </div>
@@ -12,7 +13,7 @@
 import Albums from '@/components/Albums.vue';
 import BackButton from '@/components/BackButton.vue';
 
-import { mapState } from 'vuex';
+import { mapGetters, mapState } from 'vuex';
 
 export default {
     name: 'funk-view',
@@ -23,7 +24,8 @@ export default {
         }
     },
     computed: {
-        ...mapState(['funk'])
+        ...mapState(['funk']),
+        ...mapGetters(['totalFunk'])
     },
     // methods: {}
     // watch: {},

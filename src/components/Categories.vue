@@ -52,6 +52,7 @@ export default {
 
 .container{
     width: 80%;
+    max-width: 1100px;
     margin: 3rem auto;
 }
 
