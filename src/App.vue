@@ -16,7 +16,7 @@
 }
 
 body{
-  background: #eeeeee;
+  background: #000000;
 }
 
 #app {

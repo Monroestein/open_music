@@ -32,6 +32,11 @@ export default {
 
 <style scoped>
 .container{
-    margin: 2rem auto
+    width: 80%;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    box-shadow: 0px 0px 5px #99999960;
+    transition: box-shadow .5s;
 }
 </style>

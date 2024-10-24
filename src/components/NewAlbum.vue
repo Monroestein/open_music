@@ -115,7 +115,7 @@ export default {
     .container{
         width: 80%;
         max-width: 1100px;
-        margin: 0 auto
+        margin: 5vh auto
     }
 
     button{

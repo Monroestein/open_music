@@ -2,7 +2,18 @@
 
 <template>
     <div class="header">
-        <h1 class="title_back">Open Music</h1>
+
+        <div class="header-item" id="header-letters">
+            <h1>Open Music</h1>
+        </div>
+
+        <div class="header-item" id="header-video">
+            <video autoplay muted loop>
+                <source src="@/assets/freakonaleash.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
     </div>
 </template>
 
@@ -27,28 +38,59 @@ export default {
 <style scoped>
 
 .header{
-    height: fit-content;
+    height: 30vh;
     min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 2rem auto 0 auto;
+    max-width: 90vw;
+    overflow: hidden;
+    /* border: 1px solid #cf2828; */
+    position: relative;
 }
 
-.title_back{
-    background-image: url('@/assets/shootsandladders.png');
+/* .title_back{
+    background: transparent;
     background-clip: text;
     color: transparent;
     background-size: 100%;
     background-repeat: no-repeat;
+} */
+
+.header-item{
+    background: #eeeeee;
 }
 
-h1{
+#header-letters{
     font-family: "Special Elite", system-ui;
     font-weight: 700;
-    padding: 2rem auto;
-    font-size: 11.875rem;
+    background: #000000;
+    color: #ffffff;
+    font-size: 8rem;
     word-spacing: -30px;
     letter-spacing: -10px;
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    mix-blend-mode: multiply;
+}
+
+#header-video{
+    width: 100%;
+    z-index: -99;
+}
+
+
+
+/* RESPONSIVE */
+
+@media (max-width:px){
+
 }
 
 </style>
