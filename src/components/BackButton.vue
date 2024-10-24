@@ -29,7 +29,7 @@ export default {
 <style scoped>
 
 .container{
-    margin: 3rem auto;
+    margin: 3rem auto 10rem auto;
 }
 
 button{

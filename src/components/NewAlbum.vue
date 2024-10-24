@@ -46,7 +46,7 @@
                  </label>
                  <input type="text" id="album-cover" v-model="cover" placeholder="Image URL">
                
-                <button @click="addAlbum">Add</button>
+                <button @click.prevent="addAlbum">Add</button>
                
             </form>
         </div>  
@@ -89,10 +89,10 @@ export default {
                     front_image: this.cover
                 } 
 
-                console.log(newAlbum)
+                // console.log(newAlbum)
 
                 //Action imported from vuex
-                this.addAlbumToState(newAlbum, this.genre)
+                this.addAlbumToState(newAlbum)
                 this.redirectToCategory(this.genre)
             }
 

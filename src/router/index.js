@@ -7,6 +7,7 @@ import MetalView from '@/views/MetalView.vue'
 import PopView from '@/views/PopView.vue'
 import HipHopView from '@/views/HipHopView.vue'
 import RockView from '@/views/RockView.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
 
 
 Vue.use(VueRouter)
@@ -24,6 +25,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+  },
+  {
+    path:'*',
+    name:'404',
+    component: NotFoundView
   },
   {
     path: '/funk',

@@ -314,16 +314,16 @@ export default new Vuex.Store({
     }
   },
   mutations: {
-    ADD_ALBUM:(state, genre, album)=>{
+    ADD_ALBUM:(state, album)=>{
       //As I'm missing an id from backend:
       album.id=Math.floor(Math.random()*100)
       //Push
-      state.genre.push(album)
+      state[album.genre].push(album)
     }
   },
   actions: {
-    addAlbumToState({commit}, album, genre){
-      commit('ADD_ALBUM', album, genre)
+    addAlbumToState({commit}, album){
+      commit('ADD_ALBUM', album)
     }
   },
   modules: {
