@@ -39,4 +39,10 @@ export default {
     box-shadow: 0px 0px 5px #99999960;
     transition: box-shadow .5s;
 }
+
+@media (max-width:629px){
+    .container h2{
+        font-size: 4vw;
+    }
+}
 </style>

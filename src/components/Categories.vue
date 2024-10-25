@@ -2,7 +2,7 @@
 
 <template>
     <div class="container">
-        <h1>Categories</h1>
+        <!-- <h1>Categories</h1> -->
         <div class="categories">
             <div class="category" @click="redirectPage('funk')">
                 <h3>Funk</h3>
@@ -52,12 +52,14 @@ export default {
 
 .container{
     width: 80%;
+    min-width: 320px;
     max-width: 1100px;
     margin: 3rem auto;
 }
 
 .categories{
     margin: 3rem auto;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -65,6 +67,7 @@ export default {
 }
 
 .category{
+    width: 100%;
     padding: 2rem 1rem;
     box-shadow: 0px 0px 5px #99999960;
     cursor: pointer;
@@ -73,6 +76,15 @@ export default {
 
 .category:hover {
     box-shadow: 0px 0px 8px #99999990;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+    .categories{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
 
 </style>
